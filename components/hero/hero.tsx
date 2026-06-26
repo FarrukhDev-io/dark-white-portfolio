@@ -23,14 +23,14 @@ export function Hero(): ReactNode {
 
             <h1 className="text-[2.2rem] font-medium leading-[1.05] tracking-tight text-foreground sm:text-[2.75rem] md:text-[2.5rem] lg:text-[3.65rem]">
               <span className="block">
-                Frontend Engineer &
+                I build things
               </span>
-              <span className="block">React Specialist</span>
+              <span className="block">for the web.</span>
             </h1>
 
             <p className="max-w-[34ch] text-[22px] leading-[1.4] tracking-tight text-foreground/65">
-              Building modern, scalable web applications with clean
-              architecture and strong UI engineering practices.
+              Frontend engineer focused on React & Next.js —
+              fast, accessible, and built to last.
             </p>
 
             <HeroCtas />
