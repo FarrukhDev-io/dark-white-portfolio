@@ -21,11 +21,11 @@ export function Hero(): ReactNode {
               , I&rsquo;m Farrukh
             </p>
 
-            <h1 className="text-[2.75rem] font-medium leading-[1.05] tracking-tight text-foreground md:text-[2.5rem] lg:text-[3.65rem]">
-              <span className="block whitespace-nowrap">
+            <h1 className="text-[2.2rem] font-medium leading-[1.05] tracking-tight text-foreground sm:text-[2.75rem] md:text-[2.5rem] lg:text-[3.65rem]">
+              <span className="block">
                 Frontend Engineer &
               </span>
-              <span className="block whitespace-nowrap">React Specialist</span>
+              <span className="block">React Specialist</span>
             </h1>
 
             <p className="max-w-[34ch] text-[22px] leading-[1.4] tracking-tight text-foreground/65">
