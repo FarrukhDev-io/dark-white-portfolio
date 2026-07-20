@@ -27,7 +27,7 @@ export const hero = {
   },
   ctas: {
     primary: { label: "View My Work", href: "/projects" },
-    resume: { label: "Resume", href: "/FarrukhsResume.pdf" },
+    resume: { label: "Resume", href: "/Farrukh_Resume.pdf?v=2" },
   },
 } as const;
 

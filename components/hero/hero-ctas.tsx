@@ -36,14 +36,15 @@ export function HeroCtas(): ReactNode {
             />
           </Link>
 
-          <Link
+          <a
             href={hero.ctas.resume.href}
             target="_blank"
             rel="noopener noreferrer"
+            download="Farrukh_Resume.pdf"
             className="border border-foreground/8 focus-ring inline-flex cursor-pointer items-center gap-2 rounded-xl bg-background px-5 py-2.5 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground hover:bg-foreground/4"
           >
             {hero.ctas.resume.label}
-          </Link>
+          </a>
         </motion.div>
       </motion.div>
     </LayoutGroup>
