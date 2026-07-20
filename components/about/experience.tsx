@@ -34,7 +34,7 @@ export function Experience(): ReactNode {
           className="relative"
           initial={false}
           animate={{
-            height: open ? "auto" : collapsedHeight,
+            height: open || hiddenCount <= 0 ? "auto" : collapsedHeight,
           }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           style={{ overflow: "hidden" }}
@@ -63,7 +63,7 @@ export function Experience(): ReactNode {
         </motion.div>
 
         <AnimatePresence>
-          {!open && (
+          {!open && hiddenCount > 0 && (
             <motion.div
               key="fade"
               initial={{ opacity: 0 }}

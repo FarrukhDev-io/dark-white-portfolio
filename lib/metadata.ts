@@ -4,13 +4,13 @@ export const siteConfig = {
   name: "Farrukh Djumayev",
   description:
     "Frontend Engineer specializing in React and Next.js, focused on building modern, scalable, and maintainable web applications.",
-  url: "https://farrukh-front-dev.vercel.app",
+  url: "https://farrukh-portfolio-nextjs.vercel.app",
   ogImage: "/og-image.png",
   creator: "@Farrukh_Djumayev",
   authors: [
     {
       name: "Farrukh Djumayev",
-      url: "https://farrukh-front-dev.vercel.app",
+      url: "https://farrukh-portfolio-nextjs.vercel.app",
     },
   ],
   keywords: [

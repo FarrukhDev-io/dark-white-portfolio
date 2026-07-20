@@ -1,20 +1,13 @@
 import {
-  Blocks,
   BookOpen,
-  Globe,
-  Layout,
+  Briefcase,
+  Building2,
+  Wallet,
   type LucideIcon,
 } from "lucide-react";
 
 /**
  * Single source of truth for all site copy and structured content.
- *
- * Why a typed TS module instead of JSON:
- * - Some fields hold React component references (e.g. project icons) and
- *   computed values (e.g. imageRatio: 16 / 10) that JSON cannot represent.
- * - Type safety, autocomplete and safe refactoring across the codebase.
- *
- * To edit site text, change values here — components read from this file.
  */
 
 /* -------------------------------------------------------------------------- */
@@ -27,7 +20,7 @@ export const hero = {
   name: "I\u2019m Farrukh",
   headingLines: ["I build things", "for the web."] as const,
   tagline:
-    "Frontend engineer focused on React & Next.js — fast, accessible, and built to last.",
+    "Frontend Developer focused on React & Next.js — fast, accessible, scalable, and built to last.",
   portrait: {
     src: "/farrukh.jpg",
     alt: "Farrukh Djumayev portrait",
@@ -58,18 +51,47 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "career-hub",
+    icon: Briefcase,
+    iconLabel: "School 21 CareerHub",
+    title:
+      "End-to-end career & job placement platform for School 21 students and tech employers.",
+    description:
+      "Engineered the frontend of a comprehensive career platform enabling School 21 students to connect with tech employers, apply for vacancies, and track applications. Implemented interactive dashboards, student portfolios, job filters, and secure authentication workflows using Next.js, React, and TailwindCSS / ShadCN UI.",
+    meta: "Next.js · React · TypeScript · Tailwind CSS · ShadCN UI, 2026",
+    imageRatio: 16 / 10,
+    image: "/projects/careerhub.png",
+    imageAlt: "School 21 CareerHub screenshot",
+    demoUrl: "https://careerhub.21-school.uz/",
+  },
+  {
+    id: "paymex",
+    icon: Wallet,
+    iconLabel: "PAYMEX",
+    title:
+      "Telegram Mini App for financial services, currency exchange, and international payments.",
+    description:
+      "Engineered a mobile-first Telegram Mini App frontend for PAYMEX, a financial services platform enabling currency exchange and international payments. Features responsive glassmorphism UI, ITCSS architecture, Telegram WebApp API integration, and dark-green theme.",
+    meta: "React · Telegram WebApp API · JavaScript · ITCSS Architecture, 2026",
+    imageRatio: 16 / 10,
+    image: "/projects/paymex-projects.png",
+    imageAlt: "PAYMEX Telegram Mini App screenshot",
+    githubUrl: "https://github.com/FarrukhDev-io/paymex",
+    demoUrl: "https://paymex.vercel.app/",
+  },
+  {
     id: "kokand-university",
-    icon: Globe,
+    icon: Building2,
     iconLabel: "Kokand University",
     title:
-      "Responsive university and alumni website with clean architecture, accessible UI, and optimized frontend performance.",
+      "Vacancies & Analytics Platform for Kokand University, centralizing job postings and applicant tracking.",
     description:
-      "Built with React, Next.js, TypeScript, and Tailwind CSS. Features accessible UI components, responsive layouts, and production-grade performance.",
-    meta: "React · Next.js · TypeScript · Tailwind CSS, 2024",
+      "Engineered a vacancies and analytics platform for Kokand University, centralizing job postings, automating applicant tracking, and constructing dynamic reporting dashboards for administration to support data-driven decision-making.",
+    meta: "Next.js · React · TypeScript · Tailwind CSS, 2025",
     imageRatio: 16 / 10,
     image: "/projects/kokand_university_lightMode.png",
-    imageAlt: "Kokand University website screenshot",
-    githubUrl: "https://github.com/Farrukh-Front-Dev/kokand_university",
+    imageAlt: "Kokand University platform screenshot",
+    githubUrl: "https://github.com/FarrukhDev-io/kokand_university",
     demoUrl: "https://kualumni.uz/",
   },
   {
@@ -78,42 +100,13 @@ export const projects: Project[] = [
     iconLabel: "Kelajakka Qadam",
     title: "Minimal responsive promo website for an educational center.",
     description:
-      "Showcases an educational center's links and information. Built with pure HTML, CSS, and JavaScript — clean and fast.",
+      "Showcases an educational center's links, courses, and information. Built with HTML5, CSS3, and JavaScript featuring clean layout and responsive design.",
     meta: "HTML · CSS · JavaScript, 2024",
     imageRatio: 16 / 10,
     image: "/projects/kelajakka_qadam_markazi_lightMode.png",
     imageAlt: "Kelajakka Qadam Markazi website screenshot",
-    githubUrl: "https://github.com/Farrukh-Front-Dev/KelajakkaQadam",
+    githubUrl: "https://github.com/FarrukhDev-io/KelajakkaQadam",
     demoUrl: "https://kelajakka-qadam-markazi.vercel.app/",
-  },
-  {
-    id: "portfolio",
-    icon: Layout,
-    iconLabel: "Portfolio Website",
-    title:
-      "Personal portfolio built with Next.js, Tailwind CSS, and TypeScript, featuring dark mode and glassmorphism UI.",
-    description:
-      "A showcase of my work and skills. Built with Next.js and Tailwind CSS, featuring glassmorphism UI, dark/light mode, and smooth animations.",
-    meta: "Next.js · TypeScript · Tailwind CSS, 2024",
-    imageRatio: 16 / 10,
-    image: "/projects/portfolio_website_lightMode.png",
-    imageAlt: "Portfolio website screenshot",
-    githubUrl: "https://github.com/Farrukh-Front-Dev/portfolio",
-  },
-  {
-    id: "react-dev-components",
-    icon: Blocks,
-    iconLabel: "React Dev Components",
-    title:
-      "Collection of reusable React UI components with scalable structure and responsive design patterns.",
-    description:
-      "A library of reusable React components following scalable architecture principles. Responsive, accessible, and ready for production.",
-    meta: "React · TypeScript · CSS, 2024",
-    imageRatio: 16 / 10,
-    image: "/projects/reactdev_lightMode.png",
-    imageAlt: "React Dev Components screenshot",
-    githubUrl: "https://github.com/Farrukh-Front-Dev/ReactDev",
-    demoUrl: "https://react-dev-components.vercel.app/",
   },
 ];
 
@@ -179,18 +172,18 @@ export const education: EducationEntry[] = [
 /* -------------------------------------------------------------------------- */
 
 export const skills: string[] = [
-  "React",
+  "React.js",
   "Next.js",
   "TypeScript",
-  "JavaScript",
-  "Tailwind CSS",
   "Redux Toolkit",
-  "HTML5 / CSS3",
-  "REST API Integration",
+  "Zustand",
+  "REST APIs & Axios",
+  "Tailwind CSS",
+  "ShadCN UI",
   "Git & GitHub",
-  "Docker",
+  "Vercel",
   "Component Architecture",
-  "Responsive Design",
+  "Web Performance Optimization",
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -209,13 +202,11 @@ export const stackChips: StackChip[] = [
   { label: "React", slug: "react", bg: "#1FB6CB", fg: "#ffffff" },
   { label: "Next.js", slug: "nextdotjs", bg: "#1f1f1f", fg: "#ffffff" },
   { label: "TypeScript", slug: "typescript", bg: "#2F74C0", fg: "#ffffff" },
-  { label: "JavaScript", slug: "javascript", bg: "#F7DF1E", fg: "#1f1f1f" },
-  { label: "Tailwind CSS", slug: "tailwindcss", bg: "#2BBCF5", fg: "#ffffff" },
   { label: "Redux Toolkit", slug: "redux", bg: "#764ABC", fg: "#ffffff" },
+  { label: "Tailwind CSS", slug: "tailwindcss", bg: "#2BBCF5", fg: "#ffffff" },
   { label: "Git", slug: "git", bg: "#F05032", fg: "#ffffff" },
   { label: "GitHub", slug: "github", bg: "#181717", fg: "#ffffff" },
-  { label: "Docker", slug: "docker", bg: "#2496ED", fg: "#ffffff" },
-  { label: "Postman", slug: "postman", bg: "#FF6C37", fg: "#ffffff" },
+  { label: "Vercel", slug: "vercel", bg: "#000000", fg: "#ffffff" },
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -230,8 +221,8 @@ export const contact = {
   socials: {
     email: "mailto:farrukh.front.dev@gmail.com",
     linkedin: "https://www.linkedin.com/in/farrukhdjumayev",
-    github: "https://github.com/Farrukh-Front-Dev",
+    github: "https://github.com/FarrukhDev-io",
   },
-  copyright: "2025 © Farrukh Djumayev",
-  role: "Frontend Engineer",
+  copyright: "2026 © Farrukh Djumayev",
+  role: "Frontend Developer",
 } as const;
